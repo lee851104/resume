@@ -20,3 +20,12 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
 } else {
   reveals.forEach(el => el.classList.add('in'));
 }
+
+const videos = document.querySelectorAll('.demo-video');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const vio = new IntersectionObserver(entries => entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else { v.pause(); }
+  }), { threshold: 0.35 });
+  videos.forEach(v => vio.observe(v));
+}
