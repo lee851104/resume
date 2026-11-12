@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c1724">
-  <meta name="description" content="李倫安的機器學習作品集：從資料品質、模型驗證到部署監控，讓分析成為能被使用的系統。">
-  <title>李倫安｜機器學習工程師</title>
+  <meta name="description" content="李倫安｜AI 工程師。專長 LLM 應用、RAG 文件問答與 AI 系統開發，把 AI 從原型做成每天會用、也能被稽核的系統。">
+  <title>李倫安｜AI 工程師</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -14,35 +14,146 @@
   <a class="skip" href="#main">跳到主要內容</a>
   <header class="site-header"><nav class="container" aria-label="主要導覽">
     <a class="brand" href="#top"><span class="brand-mark">L.</span> 李倫安</a>
-    <div class="nav-links"><a href="#projects">專案</a><a href="#experience">經歷</a><a href="#skills">技能</a><a href="#contact">聯絡 <span aria-hidden="true">↗</span></a></div>
+    <div class="nav-links"><a href="#projects">作品</a><a href="#experience">經歷</a><a href="#skills">技能</a><a href="#contact">聯絡</a></div>
   </nav></header>
+
   <main id="main">
+    <!-- 開場 -->
     <section class="hero container" id="top" aria-labelledby="intro-title">
       <div class="intro">
-        <p class="eyebrow"><span class="status-dot"></span> MACHINE LEARNING · DATA · ENGINEERING</p>
-        <div class="identity"><img src="assets/portrait.jpg" width="88" height="88" alt="李倫安個人照"><div><h1 id="intro-title">李倫安</h1><p class="job-title">機器學習工程師</p></div></div>
-        <h2 class="hero-line">讓資料走到決策，<br>讓模型真正<span>上線。</span></h2>
-        <p class="intro-copy">具 2.5 年 AI 影像辨識專案交付經驗。從億列資料處理、模型驗證，到 API 部署與監控，將業務問題做成能被使用、也能被驗證的系統。</p>
-        <div class="actions"><a class="button primary" href="#projects">查看專案 <span aria-hidden="true">↓</span></a><a class="button" href="assets/resume.pdf" download="李倫安_機器學習工程師_履歷.pdf">下載履歷 <span aria-hidden="true">↧</span></a><a class="text-link" href="https://github.com/metro01964" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        <p class="eyebrow"><span class="status-dot"></span> 求職中 · AI 工程師 · 台灣</p>
+        <div class="identity"><img src="assets/portrait.jpg" width="88" height="88" alt="李倫安個人照"><div><h1 id="intro-title">李倫安</h1><p class="job-title">AI 工程師｜LLM 應用・RAG・AI 系統開發</p></div></div>
+        <h2 class="hero-line">把 AI 從原型，<br>做成每天<span>用得上</span>的系統。</h2>
+        <p class="intro-copy">從運輸服務與 AI 專案管理跨域投入 AI 開發。曾帶領團隊開發含 AI 副手的企業專案管理平台，並獨立完成多個可上線的 AI 系統，涵蓋文件問答（RAG）、本地語言模型微調、機器學習預測、後端 API 與容器化部署。</p>
+        <div class="actions"><a class="button primary" href="#projects">看作品 <span aria-hidden="true">↓</span></a><a class="button" href="assets/resume.pdf" download="李倫安_AI工程師_履歷.pdf">下載履歷 PDF <span aria-hidden="true">↧</span></a><a class="text-link" href="https://github.com/metro01964" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       </div>
-      <div class="pipeline" aria-label="KKBox 流失預測流程示意">
-        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>kkbox / retention_pipeline</span><button id="motion-toggle" type="button" aria-pressed="false" aria-label="暫停流程動畫" hidden>暫停</button></div>
-        <div class="pipeline-body"><div class="terminal-label"><span>MODEL TO DECISION</span><span class="demo-label">流程示意</span></div>
-          <h3>下一步，該挽回誰？</h3><p class="pipeline-caption">從收聽日誌，到可執行的決策名單。</p>
-          <ol class="steps"><li style="--step:0"><span class="step-number">01</span><div><strong>資料與特徵</strong><small>Polars · 4.1 億列日誌 → 61 維特徵</small></div><span class="step-check" aria-hidden="true">✓</span></li><li style="--step:1"><span class="step-number">02</span><div><strong>預測與解釋</strong><small>CatBoost · 流失機率 + SHAP 原因碼</small></div><span class="step-check" aria-hidden="true">✓</span></li><li style="--step:2"><span class="step-number">03</span><div><strong>成本與決策</strong><small>結合挽回成本，篩選優先投放名單</small></div><span class="step-check" aria-hidden="true">✓</span></li></ol>
-          <div class="pipeline-result"><span><span class="status-dot"></span> 決策名單產出</span><strong>3.83<small>%</small></strong></div><p class="fine-print">依專案資料與成本假設計算，非即時線上推論。</p>
+
+      <div class="pipeline" aria-label="30 秒認識我">
+        <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>30 秒認識我</span><button id="motion-toggle" type="button" aria-pressed="false" aria-label="暫停動畫" hidden>暫停</button></div>
+        <div class="pipeline-body">
+          <h3>我能幫團隊做什麼？</h3>
+          <p class="pipeline-caption">從聽懂需求，到交出能上線、能驗收的 AI 系統。</p>
+          <ol class="steps">
+            <li style="--step:0"><span class="step-number">01</span><div><strong>聽懂需求</strong><small>把現場問題轉成明確的規則與驗收指標</small></div><span class="step-check" aria-hidden="true">✓</span></li>
+            <li style="--step:1"><span class="step-number">02</span><div><strong>做出 AI 系統</strong><small>讓 AI 讀懂文件、查詢資料、做出預測</small></div><span class="step-check" aria-hidden="true">✓</span></li>
+            <li style="--step:2"><span class="step-number">03</span><div><strong>上線並把關品質</strong><small>部署成可用服務，以自動化測試確保穩定</small></div><span class="step-check" aria-hidden="true">✓</span></li>
+          </ol>
+          <div class="pipeline-result"><span><span class="status-dot"></span> 可線上試用的作品</span><strong>5<small> 個</small></strong></div>
         </div>
       </div>
     </section>
-    <div class="container highlights"><div><strong>4.1 <span>億列</span></strong><p>收聽日誌處理</p></div><div><strong>2.5 <span>年</span></strong><p>AI 專案交付經驗</p></div><div><strong>Top 10 <span>/ 160</span></strong><p>Life House 黑客松團隊</p></div><div class="highlight-note">從需求釐清<br>到可驗證的成果 <span aria-hidden="true">↗</span></div></div>
+
+    <!-- 數字亮點 -->
+    <div class="container highlights">
+      <div><strong>30 <span>倍</span></strong><p>AI 道路巡查效率提升</p></div>
+      <div><strong>93 <span>%</span></strong><p>AI 辨識人工驗證準確率</p></div>
+      <div><strong>Top 10 <span>/ 160</span></strong><p>台灣未來祭黑客松（隊長）</p></div>
+      <div><strong>2.5 <span>年</span></strong><p>AI 專案管理與交付經驗</p></div>
+    </div>
+
+    <!-- 作品 -->
     <section class="container section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">精選專案</h2></div><p>以真實問題為起點，走完資料到應用的最後一哩。</p></div>
-      <article class="project featured"><div class="project-main"><div class="project-meta"><span class="pill">MACHINE LEARNING</span><span>獨立開發 · 2026</span></div><h3>KKBox 訂閱流失預測<br class="desktop-break">與挽回決策系統</h3><p class="project-summary">不只預測誰會流失，更回答「挽回預算該用在哪裡」。</p><ul class="details"><li><strong>資料工程</strong>以 Polars 處理 4.1 億列日誌，建構 61 維用戶特徵。</li><li><strong>可靠驗證</strong>以時間切分與資料洩漏防線驗證模型，提供 SHAP 中文原因碼。</li><li><strong>部署監控</strong>FastAPI 與 Docker 上線，搭配測試、CI 與 PSI 漂移監控。</li></ul><div class="tags"><span>Python</span><span>Polars</span><span>CatBoost</span><span>SHAP</span><span>FastAPI</span><span>Docker</span></div><div class="project-links"><a href="https://lee851104-kkbox-demo.hf.space" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/demo_kkbox" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div><aside class="project-aside"><p class="eyebrow">RETENTION DECISION</p><div class="stat"><strong>96.9 <small>萬</small></strong><span>到期用戶</span></div><div class="funnel" aria-hidden="true"><i></i><i></i><i></i></div><div class="stat accent"><strong>3.83<small>%</small></strong><span>優先挽回名單</span></div><div class="estimate"><span>期望淨收益估算</span><strong>NT$ 330 萬<span>／月</span></strong><p>依成本與挽回率假設推估，<br>非實際營運收益。</p></div></aside></article>
-      <article class="project life-project"><div class="project-main"><div class="project-meta"><span class="pill green">GEOSPATIAL DATA</span><span>三人團隊 · 隊長 · 2026</span></div><h3>Life House 安居指數</h3><p class="project-summary">把交通事故資料，轉成看得懂的生活圈安全資訊。</p><div class="award">↗ 台灣未來祭黑客松 · 前 10 名／160 組</div><ul class="details"><li><strong>資料品質</strong>整合約 23 萬件交通事故，釐清當事人與事故資料粒度，避免重複計數。</li><li><strong>風險指標</strong>依 1.6 萬取樣格與 8 個曝險分層，建立可比較的相對風險。</li><li><strong>互動應用</strong>團隊共同開發 500 公尺生活圈與事故熱點地圖，支援區域比較。</li></ul><div class="tags"><span>Python</span><span>SQLite</span><span>SciPy</span><span>Leaflet</span><span>FastAPI</span></div><div class="project-links"><a href="https://lee851104-life-house.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/life_house" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div><div class="map-art" role="img" aria-label="500 公尺生活圈概念示意，非實際地圖"><div class="map-roads"></div><div class="radius radius-outer"></div><div class="radius radius-inner"></div><span class="map-pin">⌂</span><span class="map-label">500 m<span>步行生活圈</span></span><span class="map-note">生活圈概念示意</span></div></article>
-      <div class="mini-projects"><article class="mini-project"><span class="project-index">03 / LLM APPLICATION</span><h3>機場捷運 AI 智慧助手</h3><p>整理機捷班表，以 RTX 4060 8GB 訓練 Qwen3 4B LoRA，結合視覺選站、中文問答與班表核對。</p><div class="tags"><span>Qwen3 4B</span><span>LoRA</span><span>Gradio</span></div><a href="https://lee851104-tymetro-bot.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></article><article class="mini-project"><span class="project-index">04 / TIME SERIES</span><h3>Z-score 市場分析</h3><p>整合 200 日均線、年化斜率與 Z-score，支援股票與日期查詢，以互動圖表呈現價格偏離及趨勢。</p><div class="tags"><span>Python</span><span>Plotly</span><span>時間序列</span></div><a href="https://lee851104-z-score-dashboard.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></article><article class="mini-project"><span class="project-index">05 / FINANCIAL DATA</span><h3>DCF 美股估值工具</h3><p>串接 Yahoo Finance 財務資料，自訂成長率、折現率與預測年數，逐步呈現現金流與估值結果。</p><div class="tags"><span>Python</span><span>資料整合</span><span>情境分析</span></div><a href="https://dcf-valuation.onrender.com/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></article></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / PROJECTS</p><h2 id="projects-title">作品：解決了什麼問題</h2></div><p>每個作品都附可點擊的線上 Demo。</p></div>
+
+      <article class="case featured">
+        <header class="case-head">
+          <div><div class="case-meta"><span class="pill">LLM · RAG</span><span>團隊專案・擔任組長</span></div><h3>專流 ProjectFlow</h3><p class="case-sub">企業專案管理與 AI 副手平台</p></div>
+          <div class="case-badge"><strong>組長</strong><span>帶領團隊開發</span></div>
+        </header>
+        <div class="case-body">
+          <div class="case-col"><span class="case-label">要解決的問題</span><p>企業專案的任務、進度與文件分散各處；想用 AI 幫忙查資料，但<strong>機密資料不能隨意送到外部雲端</strong>。</p></div>
+          <div class="case-col"><span class="case-label">我怎麼做</span><p>帶領團隊開發專案管理平台，涵蓋任務拆解、甘特圖、審核流程與文件自動產生；並內建 AI 副手，可用中文問文件內容、查專案資料。</p></div>
+          <div class="case-col result"><span class="case-label">成果</span><p>AI 副手會依<strong>使用者權限與資料機密等級</strong>，自動決定只用公司內部的本地模型，或先遮罩敏感資訊再送雲端，兼顧便利與資安。</p></div>
+        </div>
+        <footer class="case-foot"><div class="tags"><span>Ollama 本地 LLM</span><span>RAG 文件問答</span><span>Text-to-SQL</span></div><div class="project-links"><a href="https://node.tailc6151c.ts.net:10000/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <div><div class="case-meta"><span class="pill">MACHINE LEARNING</span><span>自主專案</span></div><h3>KKBOX 用戶流失預測</h3><p class="case-sub">提前找出可能不續訂的用戶與原因</p></div>
+          <div class="case-badge"><strong>4.1 億</strong><span>筆收聽紀錄</span></div>
+        </header>
+        <div class="case-body">
+          <div class="case-col"><span class="case-label">要解決的問題</span><p>訂閱服務需要<strong>提前知道誰可能不續訂、為什麼</strong>，才能在用戶離開前及早挽留。</p></div>
+          <div class="case-col"><span class="case-label">我怎麼做</span><p>處理 4.1 億筆收聽紀錄，訓練機器學習模型預測每位用戶的流失機率，並以中文列出主要原因。</p></div>
+          <div class="case-col result"><span class="case-label">成果</span><p>做成可直接呼叫的預測服務，支援<strong>單筆與批次預測</strong>，已部署到雲端供線上試用。</p></div>
+        </div>
+        <footer class="case-foot"><div class="tags"><span>Polars</span><span>CatBoost</span><span>FastAPI</span><span>Docker</span><span>pytest</span></div><div class="project-links"><a href="https://lee851104-kkbox-demo.hf.space" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/demo_kkbox" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></footer>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <div><div class="case-meta"><span class="pill green">GEOSPATIAL DATA</span><span>黑客松・三人團隊隊長・2026/09</span></div><h3>Life House 安居指數</h3><p class="case-sub">輸入地址，看懂住家周邊交通安全</p></div>
+          <div class="case-badge green"><strong>Top 10</strong><span>160 組參賽團隊</span></div>
+        </header>
+        <div class="case-body">
+          <div class="case-col"><span class="case-label">要解決的問題</span><p>找房時很難知道<strong>「住家附近交通安不安全」</strong>；政府事故資料量大，一般人難以閱讀。</p></div>
+          <div class="case-col"><span class="case-label">我怎麼做</span><p>帶領三人團隊整合約 23 萬件交通事故資料，做成互動地圖，可即時查詢住家 500 公尺生活圈，並支援 104 萬筆門牌地址搜尋。</p></div>
+          <div class="case-col result"><span class="case-label">成果</span><p>台灣未來祭黑客松<strong>前 10 名（共 160 組）</strong>；輸入地址即可看到周邊事故熱點。</p></div>
+        </div>
+        <footer class="case-foot"><div class="tags"><span>FastAPI</span><span>SQLite 空間索引</span><span>Leaflet 地圖</span></div><div class="project-links"><a href="https://lee851104-life-house.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/life_house" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></footer>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <div><div class="case-meta"><span class="pill">NLP · LLM</span><span>自主專案</span></div><h3>電子發票消費品味配對系統</h3><p class="case-sub">讓雜亂的發票品名變成看得懂的消費資訊</p></div>
+          <div class="case-badge"><strong>84%</strong><span>品名分類準確率</span></div>
+        </header>
+        <div class="case-body">
+          <div class="case-col"><span class="case-label">要解決的問題</span><p>電子發票上的品名常是縮寫或代碼，<strong>很難直接看出買了什麼</strong>，也就無法分析消費品味。</p></div>
+          <div class="case-col"><span class="case-label">我怎麼做</span><p>訓練 BERT 模型自動將品名分類，再由在本機執行的 Qwen3-4B 語言模型判斷商品屬性。</p></div>
+          <div class="case-col result"><span class="case-label">成果</span><p>品名分類準確率 <strong>84%</strong>；以 Docker 部署，並有 <strong>570 項自動化測試</strong>把關品質。</p></div>
+        </div>
+        <footer class="case-foot"><div class="tags"><span>FastAPI</span><span>BERT</span><span>Qwen3-4B</span><span>Docker</span><span>GitHub Actions</span></div><div class="project-links"><a href="https://metro01964.github.io/receipt_embedding/demo/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <div><div class="case-meta"><span class="pill green">LLM APPLICATION</span><span>自主專案</span></div><h3>機場捷運 AI 智慧助手</h3><p class="case-sub">用聊天的方式查機捷班次</p></div>
+          <div class="case-badge green"><strong>本機微調</strong><span>Qwen3 4B 語言模型</span></div>
+        </header>
+        <div class="case-body">
+          <div class="case-col"><span class="case-label">要解決的問題</span><p>旅客查機捷班次與站點，常要<strong>翻好幾頁時刻表</strong>才找得到答案。</p></div>
+          <div class="case-col"><span class="case-label">我怎麼做</span><p>整理機捷班表，用自己的顯示卡微調（LoRA）Qwen3 4B 語言模型，再加上點選車站與班表核對功能。</p></div>
+          <div class="case-col result"><span class="case-label">成果</span><p>完成<strong>可用中文對話的問答助手</strong>，已部署到 Hugging Face，任何人都能線上試用。</p></div>
+        </div>
+        <footer class="case-foot"><div class="tags"><span>Qwen3 4B</span><span>LoRA</span><span>Gradio</span><span>Hugging Face</span></div><div class="project-links"><a href="https://lee851104-tymetro-bot.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+      </article>
     </section>
-    <section class="container section" id="experience" aria-labelledby="experience-title"><div class="section-heading"><div><p class="eyebrow">02 / EXPERIENCE</p><h2 id="experience-title">工作經歷</h2></div><p>理解現場需求，也把交付標準落實到資料裡。</p></div><div class="timeline"><article class="experience-row"><div class="date">2023.07 — 2026.02<span>2 年 8 個月</span></div><div><h3>專案經理</h3><p class="company">日陞空間資訊股份有限公司</p><ul class="details"><li>統籌公路局 AI 鋪面巡查專案，將養護判斷轉為判釋規則與驗收指標，巡查效率提升約 <strong>30 倍</strong>。</li><li>與團隊訂定影像標註準則與品質抽檢機制，人工驗證辨識率達 <strong>93%</strong>。</li><li>協調道路設施資料建置、品質檢核與政府平台界接，銜接需求端與工程團隊。</li></ul></div></article><article class="experience-row compact"><div class="date">2023.04 — 2023.06</div><div><h3>站務員 <span>／ 台灣高鐵</span></h3></div></article><article class="experience-row compact"><div class="date">2020.08 — 2023.03</div><div><h3>站務員 <span>／ 桃園大眾捷運</span></h3><p>輪班營運、第一線旅客服務與臨場應變。</p></div></article></div></section>
-    <section class="container section" id="skills" aria-labelledby="skills-title"><div class="section-heading"><div><p class="eyebrow">03 / TOOLKIT</p><h2 id="skills-title">使用技術</h2></div><p>依實際專案經驗整理。</p></div><div class="skills-grid"><article><span>01</span><h3>資料處理</h3><p>Python · SQL · Polars · pandas<br>NumPy · SciPy · SQLite</p></article><article><span>02</span><h3>機器學習</h3><p>CatBoost · scikit-learn · SHAP<br>特徵工程 · 模型驗證 · 漂移監控</p></article><article><span>03</span><h3>部署與測試</h3><p>FastAPI · Docker · GitHub Actions<br>pytest · Playwright · Git</p></article><article><span>04</span><h3>AI 與視覺化</h3><p>LoRA · Gradio · Hugging Face<br>Leaflet · Plotly · Power BI · QGIS</p></article></div><div class="education"><span class="eyebrow">EDUCATION</span><p><strong>逢甲大學</strong> 運輸與物流學系 <span>2019 畢業</span></p><p><strong>京畿大學</strong> 韓國交換學生 <span>2018.08 — 2018.12</span></p></div></section>
-    <section class="contact-wrap" id="contact" aria-labelledby="contact-title"><div class="container contact"><div><p class="eyebrow">04 / GET IN TOUCH</p><h2 id="contact-title">一起把資料，<br>做成有用的系統。</h2><p>尋找機器學習工程師機會 · 台灣</p></div><div class="contact-links"><a class="email-link" href="mailto:metro01964@gmail.com">metro01964@gmail.com <span>↗</span></a><div><a href="https://github.com/metro01964" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="assets/resume.pdf" download="李倫安_機器學習工程師_履歷.pdf">下載 PDF 履歷 ↧</a></div></div></div></section>
-  </main><footer class="container"><span>© <span id="year">2026</span> 李倫安</span><span>資料 · 模型 · 決策</span><a href="#top">回到頂端 ↑</a></footer>
+
+    <!-- 經歷 -->
+    <section class="container section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / EXPERIENCE</p><h2 id="experience-title">工作經歷</h2></div><p>AI 專案交付・跨部門溝通・資料品質</p></div>
+      <div class="timeline">
+        <article class="experience-row"><div class="date">2023/07 — 2026/02<span>2 年 8 個月</span></div><div><h3>專案經理</h3><p class="company">日陞空間資訊股份有限公司</p>
+          <p class="plain">負責公路局 <strong>AI 鋪面巡查專案</strong>：用 AI 辨識道路影像中的路面損壞，取代人工逐段巡查。</p>
+          <ul class="details">
+            <li>擔任業主與工程團隊的溝通窗口，把現場需求轉成判釋規則與驗收指標，巡查效率提升約 <strong>30 倍</strong>。</li>
+            <li>與團隊訂定標註準則與抽檢機制，人工驗證辨識率達 <strong>93%</strong>。</li>
+            <li>負責道路設施資料規格、品質檢核，以及與政府平台的系統串接。</li>
+          </ul></div></article>
+        <article class="experience-row compact"><div class="date">2023/04 — 2023/06</div><div><h3>站務員 <span>／ 台灣高鐵</span></h3></div></article>
+        <article class="experience-row compact"><div class="date">2020/08 — 2023/03</div><div><h3>站務員 <span>／ 桃園捷運</span></h3><p>第一線旅客服務與臨場應變，培養以使用者為中心的思考。</p></div></article>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="container section" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / SKILLS</p><h2 id="skills-title">核心技能</h2></div><p>每項技能都用在上方作品中。</p></div>
+      <div class="skills-grid">
+        <article><span>01</span><h3>LLM 與 RAG</h3><p class="skill-plain">讓 AI 讀懂文件、用中文回答問題</p><p>RAG · Embedding · Text-to-SQL<br>Ollama · Qwen3 LoRA · BERT 微調</p></article>
+        <article><span>02</span><h3>後端與資料庫</h3><p class="skill-plain">把 AI 包成其他系統能呼叫的服務</p><p>Python · FastAPI<br>PostgreSQL · SQLite</p></article>
+        <article><span>03</span><h3>部署與版本控制</h3><p class="skill-plain">穩定上線，並以自動化測試把關</p><p>Docker · Git<br>GitHub Actions · pytest</p></article>
+        <article><span>04</span><h3>專案管理與溝通</h3><p class="skill-plain">銜接業主需求與工程團隊</p><p>需求訪談 · 驗收指標<br>標註準則 · 資料品質檢核</p></article>
+      </div>
+      <div class="education"><span class="eyebrow">EDUCATION</span><p><strong>逢甲大學</strong> 運輸與物流學系 <span>2015 — 2019</span></p><p><strong>京畿大學</strong> 韓國・交換學生 <span>2018/08 — 2018/12</span></p></div>
+    </section>
+
+    <!-- 聯絡 -->
+    <section class="contact-wrap" id="contact" aria-labelledby="contact-title"><div class="container contact">
+      <div><p class="eyebrow">04 / CONTACT</p><h2 id="contact-title">讓 AI 從原型，<br>走進每天的工作。</h2><p>希望加入重視 AI 落地的團隊，以 LLM 應用、RAG 與後端開發經驗打造企業 AI 系統；結合專案管理與跨部門溝通背景，把 AI 做成使用者每天會用、也能被稽核的系統。</p></div>
+      <div class="contact-links"><a class="email-link" href="mailto:lee851104@gmail.com">lee851104@gmail.com <span>↗</span></a><div><a href="https://github.com/metro01964" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="assets/resume.pdf" download="李倫安_AI工程師_履歷.pdf">下載 PDF 履歷 ↧</a></div></div>
+    </div></section>
+  </main>
+  <footer class="container"><span>© <span id="year">2026</span> 李倫安</span><span>需求 · AI · 上線</span><a href="#top">回到頂端 ↑</a></footer>
 </body></html>

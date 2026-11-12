@@ -5,7 +5,7 @@ if (!reducedMotion.matches) toggle.hidden = false;
 toggle.addEventListener('click', () => {
   const paused = pipeline.classList.toggle('paused');
   toggle.setAttribute('aria-pressed', String(paused));
-  toggle.setAttribute('aria-label', paused ? '播放流程動畫' : '暫停流程動畫');
+  toggle.setAttribute('aria-label', paused ? '播放動畫' : '暫停動畫');
   toggle.textContent = paused ? '播放' : '暫停';
 });
 reducedMotion.addEventListener('change', event => { toggle.hidden = event.matches; });
