@@ -10,3 +10,13 @@ toggle.addEventListener('click', () => {
 });
 reducedMotion.addEventListener('change', event => { toggle.hidden = event.matches; });
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  reveals.forEach(el => io.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('in'));
+}

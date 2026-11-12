@@ -8,6 +8,7 @@
   <title>李倫安｜AI 工程師</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -38,7 +39,7 @@
             <li style="--step:1"><span class="step-number">02</span><div><strong>做出 AI 系統</strong><small>讓 AI 讀懂文件、查詢資料、做出預測</small></div><span class="step-check" aria-hidden="true">✓</span></li>
             <li style="--step:2"><span class="step-number">03</span><div><strong>上線並把關品質</strong><small>部署成可用服務，以自動化測試確保穩定</small></div><span class="step-check" aria-hidden="true">✓</span></li>
           </ol>
-          <div class="pipeline-result"><span><span class="status-dot"></span> 可線上試用的作品</span><strong>5<small> 個</small></strong></div>
+          <div class="pipeline-result"><span><span class="status-dot"></span> 可線上試用的作品</span><strong>6<small> 個</small></strong></div>
         </div>
       </div>
     </section>
@@ -53,71 +54,117 @@
 
     <!-- 作品 -->
     <section class="container section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / PROJECTS</p><h2 id="projects-title">作品：解決了什麼問題</h2></div><p>每個作品都附可點擊的線上 Demo。</p></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / PROJECTS</p><h2 id="projects-title">作品：解決了什麼問題</h2></div><p>點截圖即可開啟線上 Demo。</p></div>
+      <nav class="jump" aria-label="作品快速導覽">
+        <a href="#p-projectflow">專流 ProjectFlow</a><a href="#p-hrrag">HR 請假法規問答</a><a href="#p-kkbox">KKBOX 流失預測</a><a href="#p-lifehouse">Life House 安居指數</a><a href="#p-receipt">發票品味配對</a><a href="#p-tymetro">機捷 AI 查班助手</a>
+      </nav>
 
-      <article class="case featured">
-        <header class="case-head">
-          <div><div class="case-meta"><span class="pill">LLM · RAG</span><span>團隊專案・擔任組長</span></div><h3>專流 ProjectFlow</h3><p class="case-sub">企業專案管理與 AI 副手平台</p></div>
-          <div class="case-badge"><strong>組長</strong><span>帶領團隊開發</span></div>
-        </header>
-        <div class="case-body">
-          <div class="case-col"><span class="case-label">要解決的問題</span><p>企業專案的任務、進度與文件分散各處；想用 AI 幫忙查資料，但<strong>機密資料不能隨意送到外部雲端</strong>。</p></div>
-          <div class="case-col"><span class="case-label">我怎麼做</span><p>帶領團隊開發專案管理平台，涵蓋任務拆解、甘特圖、審核流程與文件自動產生；並內建 AI 副手，可用中文問文件內容、查專案資料。</p></div>
-          <div class="case-col result"><span class="case-label">成果</span><p>AI 副手會依<strong>使用者權限與資料機密等級</strong>，自動決定只用公司內部的本地模型，或先遮罩敏感資訊再送雲端，兼顧便利與資安。</p></div>
+      <article class="case reveal" id="p-projectflow">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill">LLM · RAG</span><span>團隊專案・擔任組長・2026/10</span></div>
+          <h3>專流 ProjectFlow</h3>
+          <p class="case-sub">企業專案管理與 AI 副手平台</p>
+          <p class="hook">專案進度靠 Excel、LINE 和口頭交代，漏掉一步，往往到最後才發現。</p>
+          <dl class="metrics">
+            <div><dt>自動把關</dt><dd>前一步沒審核，下一步就無法開始</dd></div>
+            <div><dt>96.3%</dt><dd>AI 文件問答找對段落的比率（實測）</dd></div>
+            <div><dt>機密不外流</dt><dd>依權限決定用本地模型或遮罩後送雲端</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>到處翻 Excel、LINE，誰負責、做完沒都沒紀錄。</p><p><span class="ba-tag after">現在</span>每個步驟排進流程、沒審核不能往下；文件自動產生，AI 副手回答附出處並提醒延誤風險。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>帶領團隊開發；AI 副手以 RAG 回答文件問題、以 Text-to-SQL 查專案資料，模型在公司電腦上執行。</p>
+          <div class="case-foot"><div class="tags"><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>Ollama</span><span>bge-m3</span><span>Docker</span></div><div class="project-links"><a href="https://node.tailc6151c.ts.net:10000/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></div>
         </div>
-        <footer class="case-foot"><div class="tags"><span>Ollama 本地 LLM</span><span>RAG 文件問答</span><span>Text-to-SQL</span></div><div class="project-links"><a href="https://node.tailc6151c.ts.net:10000/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+        <a class="case-shot" href="https://node.tailc6151c.ts.net:10000/" target="_blank" rel="noopener noreferrer" aria-label="開啟專流 ProjectFlow Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/projectflow.webp" width="1120" height="700" loading="lazy" alt="專流 ProjectFlow 畫面：專案看板與右側 AI 專案副手"><figcaption>公司與資料皆為虛構</figcaption></figure></a>
       </article>
 
-      <article class="case">
-        <header class="case-head">
-          <div><div class="case-meta"><span class="pill">MACHINE LEARNING</span><span>自主專案</span></div><h3>KKBOX 用戶流失預測</h3><p class="case-sub">提前找出可能不續訂的用戶與原因</p></div>
-          <div class="case-badge"><strong>4.1 億</strong><span>筆收聽紀錄</span></div>
-        </header>
-        <div class="case-body">
-          <div class="case-col"><span class="case-label">要解決的問題</span><p>訂閱服務需要<strong>提前知道誰可能不續訂、為什麼</strong>，才能在用戶離開前及早挽留。</p></div>
-          <div class="case-col"><span class="case-label">我怎麼做</span><p>處理 4.1 億筆收聽紀錄，訓練機器學習模型預測每位用戶的流失機率，並以中文列出主要原因。</p></div>
-          <div class="case-col result"><span class="case-label">成果</span><p>做成可直接呼叫的預測服務，支援<strong>單筆與批次預測</strong>，已部署到雲端供線上試用。</p></div>
+      <article class="case reveal" id="p-hrrag">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill">RAG</span><span>自主專案・2026/10</span></div>
+          <h3>HR 請假法規知識庫問答</h3>
+          <p class="case-sub">讓 AI 查好法規，並附上原文出處</p>
+          <p class="hook">「婚假幾天、有沒有薪水？」員工一直問，HR 一直翻法規。</p>
+          <dl class="metrics">
+            <div><dt>22 / 22</dt><dd>測試題答案全部正確</dd></div>
+            <div><dt>53 / 53</dt><dd>引用的原文段落都有依據</dd></div>
+            <div><dt>10 份</dt><dd>官方法規與公司規章建成知識庫</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>員工問 HR，HR 再翻勞基法、勞動部問答與公司辦法逐條查。</p><p><span class="ba-tag after">現在</span>AI 只根據原文作答並附出處；依員工／主管／人資權限與法規版本回答，查無依據就說資料不足。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>結合關鍵字與語意搜尋找出相關法條，再重新排序挑出最相關段落交給 GPT-4.1 作答，避免 AI 自信地答錯。</p>
+          <div class="case-foot"><div class="tags"><span>BGE</span><span>BM25</span><span>Reranker</span><span>GPT-4.1</span><span>FastAPI</span><span>SQLite</span></div><div class="project-links"><a href="https://lee851104.github.io/hr_rag/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/hr_rag" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div>
         </div>
-        <footer class="case-foot"><div class="tags"><span>Polars</span><span>CatBoost</span><span>FastAPI</span><span>Docker</span><span>pytest</span></div><div class="project-links"><a href="https://lee851104-kkbox-demo.hf.space" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/demo_kkbox" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></footer>
+        <a class="case-shot" href="https://lee851104.github.io/hr_rag/" target="_blank" rel="noopener noreferrer" aria-label="開啟 HR 請假法規問答 Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/hrrag.webp" width="1120" height="700" loading="lazy" alt="HR 請假法規問答畫面：回答生理假規定並引用性別平等工作法原文"><figcaption>公司文件為虛構</figcaption></figure></a>
       </article>
 
-      <article class="case">
-        <header class="case-head">
-          <div><div class="case-meta"><span class="pill green">GEOSPATIAL DATA</span><span>黑客松・三人團隊隊長・2026/09</span></div><h3>Life House 安居指數</h3><p class="case-sub">輸入地址，看懂住家周邊交通安全</p></div>
-          <div class="case-badge green"><strong>Top 10</strong><span>160 組參賽團隊</span></div>
-        </header>
-        <div class="case-body">
-          <div class="case-col"><span class="case-label">要解決的問題</span><p>找房時很難知道<strong>「住家附近交通安不安全」</strong>；政府事故資料量大，一般人難以閱讀。</p></div>
-          <div class="case-col"><span class="case-label">我怎麼做</span><p>帶領三人團隊整合約 23 萬件交通事故資料，做成互動地圖，可即時查詢住家 500 公尺生活圈，並支援 104 萬筆門牌地址搜尋。</p></div>
-          <div class="case-col result"><span class="case-label">成果</span><p>台灣未來祭黑客松<strong>前 10 名（共 160 組）</strong>；輸入地址即可看到周邊事故熱點。</p></div>
+      <article class="case reveal" id="p-kkbox">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill">MACHINE LEARNING</span><span>獨立開發・2026/08 起</span></div>
+          <h3>KKBOX 訂閱流失預測</h3>
+          <p class="case-sub">與挽回決策系統</p>
+          <p class="hook">每月 96.9 萬人訂閱到期，預算有限，挽回優惠該發給誰？</p>
+          <dl class="metrics">
+            <div><dt>NT$330 萬</dt><dd>照名單投放的每月期望淨收益*</dd></div>
+            <div><dt>3.83%</dt><dd>只挑出值得投放的人，不亂發</dd></div>
+            <div><dt>83.3%</dt><dd>名單命中率</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>憑感覺挑人或全面發優惠，白白送給本來就會續訂的人。</p><p><span class="ba-tag after">現在</span>自動產出最划算的投放名單，每位用戶附三句中文原因。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>處理 4.1 億筆收聽紀錄訓練流失預測模型，結合挽回成本挑出名單，並做成可呼叫的 API。<span class="note">*依成本與挽回率假設推估，非實際營運收益。</span></p>
+          <div class="case-foot"><div class="tags"><span>Polars</span><span>CatBoost</span><span>SHAP</span><span>FastAPI</span><span>Docker</span></div><div class="project-links"><a href="https://lee851104-kkbox-demo.hf.space" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/demo_kkbox" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div>
         </div>
-        <footer class="case-foot"><div class="tags"><span>FastAPI</span><span>SQLite 空間索引</span><span>Leaflet 地圖</span></div><div class="project-links"><a href="https://lee851104-life-house.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/life_house" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></footer>
+        <a class="case-shot" href="https://lee851104-kkbox-demo.hf.space" target="_blank" rel="noopener noreferrer" aria-label="開啟 KKBOX 流失預測 Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/kkbox.webp" width="1120" height="700" loading="lazy" alt="KKBOX 流失預測畫面：調整用戶條件後顯示流失機率 96.5% 與主要原因"></figure></a>
       </article>
 
-      <article class="case">
-        <header class="case-head">
-          <div><div class="case-meta"><span class="pill">NLP · LLM</span><span>自主專案</span></div><h3>電子發票消費品味配對系統</h3><p class="case-sub">讓雜亂的發票品名變成看得懂的消費資訊</p></div>
-          <div class="case-badge"><strong>84%</strong><span>品名分類準確率</span></div>
-        </header>
-        <div class="case-body">
-          <div class="case-col"><span class="case-label">要解決的問題</span><p>電子發票上的品名常是縮寫或代碼，<strong>很難直接看出買了什麼</strong>，也就無法分析消費品味。</p></div>
-          <div class="case-col"><span class="case-label">我怎麼做</span><p>訓練 BERT 模型自動將品名分類，再由在本機執行的 Qwen3-4B 語言模型判斷商品屬性。</p></div>
-          <div class="case-col result"><span class="case-label">成果</span><p>品名分類準確率 <strong>84%</strong>；以 Docker 部署，並有 <strong>570 項自動化測試</strong>把關品質。</p></div>
+      <article class="case reveal" id="p-lifehouse">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill green">GEOSPATIAL DATA</span><span>黑客松・三人團隊隊長・2026/09</span></div>
+          <h3>Life House 安居指數</h3>
+          <p class="case-sub">輸入地址，看懂住家周邊交通安全</p>
+          <p class="hook">找房查得到價格和通勤，卻查不到住家附近走路安不安全。</p>
+          <dl class="metrics">
+            <div><dt>前 10 名</dt><dd>黑客松 160 組參賽團隊</dd></div>
+            <div><dt>23 萬件</dt><dd>桃園市五年交通事故資料</dd></div>
+            <div><dt>500 公尺</dt><dd>步行生活圈即時分析</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>自己翻政府原始資料、數事故件數，市區永遠看起來最危險。</p><p><span class="ba-tag after">現在</span>輸入地址就得到公平的相對安全分數（例如「比附近 24% 的區域安全」），並標出危險路口。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>帶領三人團隊整合事故資料，以空間索引做到即時查詢，並支援 104 萬筆門牌地址搜尋。</p>
+          <div class="case-foot"><div class="tags"><span>FastAPI</span><span>SQLite</span><span>NumPy</span><span>Leaflet</span><span>Playwright</span></div><div class="project-links"><a href="https://lee851104-life-house.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/life_house" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div>
         </div>
-        <footer class="case-foot"><div class="tags"><span>FastAPI</span><span>BERT</span><span>Qwen3-4B</span><span>Docker</span><span>GitHub Actions</span></div><div class="project-links"><a href="https://metro01964.github.io/receipt_embedding/demo/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+        <a class="case-shot" href="https://lee851104-life-house.hf.space/" target="_blank" rel="noopener noreferrer" aria-label="開啟 Life House 安居指數 Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/lifehouse.webp" width="1120" height="626" loading="lazy" alt="Life House 畫面：中壢地區事故熱點地圖與「比附近 24% 的區域安全」分數"></figure></a>
       </article>
 
-      <article class="case">
-        <header class="case-head">
-          <div><div class="case-meta"><span class="pill green">LLM APPLICATION</span><span>自主專案</span></div><h3>機場捷運 AI 智慧助手</h3><p class="case-sub">用聊天的方式查機捷班次</p></div>
-          <div class="case-badge green"><strong>本機微調</strong><span>Qwen3 4B 語言模型</span></div>
-        </header>
-        <div class="case-body">
-          <div class="case-col"><span class="case-label">要解決的問題</span><p>旅客查機捷班次與站點，常要<strong>翻好幾頁時刻表</strong>才找得到答案。</p></div>
-          <div class="case-col"><span class="case-label">我怎麼做</span><p>整理機捷班表，用自己的顯示卡微調（LoRA）Qwen3 4B 語言模型，再加上點選車站與班表核對功能。</p></div>
-          <div class="case-col result"><span class="case-label">成果</span><p>完成<strong>可用中文對話的問答助手</strong>，已部署到 Hugging Face，任何人都能線上試用。</p></div>
+      <article class="case reveal" id="p-receipt">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill">NLP · LLM</span><span>自主專案</span></div>
+          <h3>電子發票消費品味配對</h3>
+          <p class="case-sub">讓雜亂的發票品名變成看得懂的消費習慣</p>
+          <p class="hook">記帳撐不久、自我介紹又會美化，用發票認識一個人的真實品味。</p>
+          <dl class="metrics">
+            <div><dt>84%</dt><dd>發票品名自動分類準確率（10 類）</dd></div>
+            <div><dt>18 項</dt><dd>從實際消費算出的品味特徵</dd></div>
+            <div><dt>570 項</dt><dd>自動化測試把關品質</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>手動記帳，靠自我介紹認識人。</p><p><span class="ba-tag after">現在</span>上傳發票自動整理消費，用真實消費配對品味相近或互補的人。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>微調 BERT 分類品名，再用在本機執行的 Qwen3-4B 判斷商品屬性，真實品名不必上傳雲端。</p>
+          <div class="case-foot"><div class="tags"><span>PyTorch</span><span>BERT</span><span>Qwen3-4B</span><span>FastAPI</span><span>Docker</span></div><div class="project-links"><a href="https://metro01964.github.io/receipt_embedding/demo/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/metro01964/receipt_embedding" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div>
         </div>
-        <footer class="case-foot"><div class="tags"><span>Qwen3 4B</span><span>LoRA</span><span>Gradio</span><span>Hugging Face</span></div><div class="project-links"><a href="https://lee851104-tymetro-bot.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a></div></footer>
+        <a class="case-shot" href="https://metro01964.github.io/receipt_embedding/demo/" target="_blank" rel="noopener noreferrer" aria-label="開啟發票品味配對 Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/receipt.webp" width="1120" height="700" loading="lazy" alt="發票品味配對畫面：兩人逐項對照消費品味，相似度 97%"><figcaption>示範資料皆為虛構</figcaption></figure></a>
+      </article>
+
+      <article class="case reveal" id="p-tymetro">
+        <div class="case-text">
+          <div class="case-meta"><span class="pill green">LLM APPLICATION</span><span>自主專案</span></div>
+          <h3>機場捷運 AI 查班助手</h3>
+          <p class="case-sub">用中文直接問「下一班幾點」</p>
+          <p class="hook">當了三年桃捷站務員，每天都被問「下一班幾點、該搭哪一班」。</p>
+          <dl class="metrics">
+            <div><dt>自己訓練</dt><dd>用整理好的班表微調中文 AI 模型</dd></div>
+            <div><dt>8 GB</dt><dd>一張家用顯示卡就完成訓練</dd></div>
+            <div><dt>雙重核對</dt><dd>AI 的回答再用正式班表檢查</dd></div>
+          </dl>
+          <div class="ba"><p><span class="ba-tag before">原本</span>翻班表、自己對照時間和車種；一般聊天機器人還會編出不存在的班次。</p><p><span class="ba-tag after">現在</span>點選車站或用中文發問就有答案，並以正式班表核對，避免 AI 亂答。</p></div>
+          <p class="how"><strong>我怎麼做：</strong>整理機捷班表，以 LoRA 微調 Qwen3 4B，用 Gradio 做成網頁並部署到 Hugging Face。</p>
+          <div class="case-foot"><div class="tags"><span>Qwen3 4B</span><span>LoRA</span><span>Unsloth</span><span>Gradio</span><span>Hugging Face</span></div><div class="project-links"><a href="https://lee851104-tymetro-bot.hf.space/" target="_blank" rel="noopener noreferrer">開啟 Demo ↗</a><a href="https://github.com/lee851104/tymetro_bot" target="_blank" rel="noopener noreferrer">原始碼 ↗</a></div></div>
+        </div>
+        <a class="case-shot" href="https://lee851104-tymetro-bot.hf.space/" target="_blank" rel="noopener noreferrer" aria-label="開啟機捷 AI 查班助手 Demo"><figure class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/shots/tymetro.webp" width="1120" height="700" loading="lazy" alt="機捷查班助手畫面：選擇台北車站到第二航廈，顯示下一班 10:23 與 10:30"></figure></a>
       </article>
     </section>
 
